@@ -34,7 +34,7 @@ int main() {
     }
 
     // Establish connection with server
-    if (connect(sockfd, (struct sockaddr *)&server_addr, sizeof(server_addr)) {
+   if (connect(sockfd, (struct sockaddr *)&server_addr, sizeof(server_addr)) < 0) {
         perror("Connection failed");
         close(sockfd);
         exit(EXIT_FAILURE);
